@@ -243,30 +243,35 @@ void Uart2_TransmitHandler(void)
 * Output	: None
 *------------------------------------------------------------------------------
 */
-void UART1_init(void)
+
+void UART1_init(unsigned long baudRate)
 {
+
 	UINT8 uartConfig= USART_TX_INT_OFF &
 				USART_RX_INT_ON &
 				USART_ASYNCH_MODE &
 				USART_EIGHT_BIT &
 				USART_CONT_RX &
 				USART_BRGH_HIGH;
-// configure USART
-	Open1USART( uartConfig ,
-				15);
-				//103);
-// Enable interrupt priority
-// 	RCONbits.IPEN = 1;
+
+	baudRate += (unsigned long)1;
+	baudRate *= (unsigned long)16;
+	baudRate = GetSystemClock() / 	baudRate;
+
+	// configure USART
+	Open1USART( uartConfig , baudRate);	
+	
 
 	TXSTAbits.TXEN = 1;	//enable transmission
 	TXSTAbits.CSRC = 0;
-	//PIE1bits.RC1IE = 1;
+	PIE1bits.RC1IE = 1;
 
-//	IPR1bits.TXIP = 1;	//make transmit interrupt high priority
+	IPR1bits.TXIP = 1;	//make transmit interrupt high priority
 
 
  	
 }
+
 
 
 void UART2_init(void)

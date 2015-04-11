@@ -102,7 +102,7 @@ void APP_incrementAndCall(UINT8 *buffer)
 			buffer[i] = '0';
 	}
 
-	COM_txCMD( DEVICE_ID, buffer, 3);
+	COM_txCMD( DEVICE_ADDRESS, buffer, 3);
 
 }
 
@@ -115,14 +115,14 @@ void APP_decrementAndCall(UINT8 *buffer)
 		buffer[2]--;
 	else
 	{
-		if(buffer[1] > '0')
+		if( buffer[1] > '0' )
 		{
 			buffer[1]--;	
 			buffer[2] = '9';
 		}	
 		else
 		{
-			if(buffer[0] > '0')
+			if( buffer[0] > '0' )
 			{
 				buffer[0]--;
 				buffer[1] = '9';
@@ -131,12 +131,12 @@ void APP_decrementAndCall(UINT8 *buffer)
 		}
 	}
 
-	COM_txCMD( DEVICE_ID, buffer, 3);
+	COM_txCMD( DEVICE_ADDRESS, buffer, 3);
 }
 
 void APP_call( UINT8 *buffer )
 {
-	COM_txCMD( DEVICE_ID, buffer, 3);
+	COM_txCMD( DEVICE_ADDRESS, buffer, 3);
 }
 
 

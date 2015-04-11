@@ -67,9 +67,9 @@ void COM_init(UINT8 rx_sop , UINT8 rx_eop ,UINT8 tx_sop , UINT8 tx_eop , UINT8 (
 void COM_restart()
 {
 #if (defined __18F8722_H) ||(defined __18F46K22_H)
-	UART1_init();
+	UART1_init(UART1_BAUDRATE);
 #else
-	UART_init();	//initialize uart
+	UART_init(UART1_BAUDRATE);	//initialize uart
 #endif
 
 	communication.rxPacketIndex = 0;

@@ -49,7 +49,7 @@
 #define RESP_SOP	0xCC
 #define RESP_EOP	0xDD
 
-
+#define UART1_BAUDRATE	62500
 enum
 {
 	RX_PACKET_SIZE = 128,

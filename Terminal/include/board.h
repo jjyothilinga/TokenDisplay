@@ -124,7 +124,7 @@
 *------------------------------------------------------------------------------
 */
 
-#define DEVICE_ID			(0x01)
+
 
 #define SYSTEM_CLOCK			(16000000UL)	// 16MHz internal oscillator	
 

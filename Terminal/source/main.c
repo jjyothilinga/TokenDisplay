@@ -184,26 +184,6 @@ void main(void)
 #endif
 
 
-#ifdef TOWER_LAMP_TEST
-	GREEN = 1;
-	DelayMs(1000);
-	GREEN = 0;
-
-	YELLOW = 1;
-	DelayMs(1000);
-	YELLOW = 0;
-
-	RED = 1;
-	DelayMs(1000);
-	RED = 0;
-
-
-	BUZZER = 1;
-	DelayMs(1000);
-	BUZZER = 0;
-
-#endif
-
 
 	KEYPAD_init();
 	

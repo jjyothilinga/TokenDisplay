@@ -82,7 +82,7 @@ typedef struct _UART
 * Public Function Prototypes (extern)
 *------------------------------------------------------------------------------
 */
-void UART1_init(void);
+void UART1_init(unsigned long baudRate);
 void UART2_init(void);
 extern void Uart1_ReceiveHandler(void);
 extern void Uart1_TransmitHandler(void);
