@@ -1,2 +1,2 @@
 wait 1 sec
-AA FA 05 81 31 32 33 34 7A BB
+AA FA 03 71 72 73 89 BB

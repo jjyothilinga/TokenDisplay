@@ -44,7 +44,7 @@
 
 typedef enum
 {
-	MAX_DIGITS = 8
+	MAX_DIGITS = 4
 }DIGITDISPLAY_CONFIG;
 
 

@@ -67,7 +67,7 @@ void COM_init(UINT8 rx_sop , UINT8 rx_eop ,UINT8 tx_sop , UINT8 tx_eop , UINT8 (
 void COM_restart()
 {
 #if (defined __18F8722_H) ||(defined __18F46K22_H)
-	UART1_init(19200);
+	UART1_init(BAURDRATE_1);
 #else
 	UART_init();	//initialize uart
 #endif

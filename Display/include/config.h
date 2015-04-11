@@ -20,7 +20,7 @@
 *	OSCILLATOR CONFIG
 *----------------------------------------*/
 
-#define SYSTEM_CLOCK			(MHz_64)	
+#define SYSTEM_CLOCK			(MHz_32)	
 
 
 /*----------------------------------------
@@ -58,7 +58,7 @@ enum
 *	COM module configuration
 *----------------------------------------*/
 #define DEVICE_ADDRESS  0xFA
-
+#define BAURDRATE_1   57600
 #define __BCC_XOR__
 //#define __RESPONSE_ENABLED__
 //#define __LOOP_BACK__
@@ -73,9 +73,9 @@ enum
 /*----------------------------------------
 *	Display module configuration
 *----------------------------------------*/
-//#define __DISPLAY_TEST__
+#define __DISPLAY_TEST__
 #define MAX_MSG 7
-//#define COMMON_CATHODE
+#define COMMON_CATHODE
 
 
 // Enable for external eeprom access
@@ -113,6 +113,7 @@ enum
 #define MODIFY_PLAN 		0x82
 
 #define HOOTER_COUNT		100
+#define BLINK_COUNT			60
 
 /*
 *------------------------------------------------------------------------------

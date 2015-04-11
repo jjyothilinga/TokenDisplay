@@ -25,7 +25,8 @@ typedef struct _App
 {   
 	UINT8 	token[ NO_OF_DIGITS];
 	UINT8	tokenFlag;
-	UINT16 	hooterCount;
+	UINT8 	hooterCount;
+	UINT8	blinkCount;
 	UINT8   tokenNO;
 
 
@@ -92,13 +93,14 @@ void APP_task( void )
 	UINT8 i;
 
 	app.hooterCount++;
-	if(	app.hooterCount >=  HOOTER_COUNT )
-	{
-		HOOTER = FALSE;
-	}
+	app.blinkCount++;
 
 	if(app.tokenFlag == TRUE)
 	{
+
+       	DigitDisplay_updateBuffer(app.token);
+		HOOTER = TRUE;
+		DigitDisplay_blinkOn(1000);
         for( i = 0; i < NO_OF_DIGITS; i++)
 		{
 			Write_b_eep(EPROM_TOKEN + i , app.token[i]);
@@ -106,9 +108,18 @@ void APP_task( void )
 		}
 
 		app.tokenFlag = FALSE;
+	}
+
+	if(	app.hooterCount >=  HOOTER_COUNT )
+	{
+		HOOTER = FALSE;
 	}		
 	
-			
+	if(	app.blinkCount >=  BLINK_COUNT )
+	{
+		DigitDisplay_blinkOff();
+	}
+		
 	 
 }
 
@@ -174,33 +185,19 @@ UINT8 APP_comCallBack( UINT8 *rxPacket, UINT8* txCode, UINT8** txPacket)
 {
 
 	UINT8 i;
-   	
-
-	UINT8 rxCode = rxPacket[0];
-
 	UINT8 length = 0;
 		    	
-	switch( rxCode )
- 	{
-	  	case MODIFY_TOKEN:
-			
-			app.hooterCount = 0;
-            for( i = 0; i < NO_OF_DIGITS; i++)
+	
+            for( i = 0; i < 3; i++)
 			{
-				app.token[i] = rxPacket[i+1];
+				app.token[i] = rxPacket[2 - i] ;
 			}
-    
-           	DigitDisplay_updateBuffer(app.token);
-			HOOTER = TRUE;
+    		app.token[3] = '0';
+			app.hooterCount = 0;
+			app.blinkCount = 0;
 			app.tokenFlag = TRUE;
 			*txCode = MODIFY_TOKEN;
 		   
-		break;
-
-		default:
-		break;
-
-	}
 
 	return length;
 

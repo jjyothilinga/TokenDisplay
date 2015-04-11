@@ -1,4 +1,4 @@
-
+ 
 /*
 *------------------------------------------------------------------------------
 * main.c
@@ -146,7 +146,7 @@
 *
 *------------------------------------------------------------------------------
 */
-#define DIGIT_REFRESH_PERIOD	(65535 - 5000)
+#define DIGIT_REFRESH_PERIOD	(65535 - 8000)
 
 void main(void)
 {
@@ -157,9 +157,11 @@ void main(void)
 
 	DigitDisplay_init( NO_OF_DIGITS);		
 	//initialize timer0
-	TMR0_init(tickPeriod,0);	
+	TMR0_init(tickPeriod,0);
+	//initialize timer1
+	TMR0_init(DIGIT_REFRESH_PERIOD,DigitDisplay_task);
 	//initialize timer2
-	TMR2_init(30,DigitDisplay_task);	
+//	TMR2_init(30,DigitDisplay_task);	
 	//initialize Communication
     COM_init(CMD_SOP , CMD_EOP ,RESP_SOP , RESP_EOP , APP_comCallBack);
 	APP_init();

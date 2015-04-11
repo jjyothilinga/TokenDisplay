@@ -262,6 +262,136 @@ ToolArgsString=-O-
 TraceCmdString=
 DebugOptions=-D__DEBUG
 [File020]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\obj\board.o
+Folder=Intermediary
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mcc18.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=-O-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PK3=1
+[File021]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\obj\config.o
+Folder=Intermediary
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mcc18.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=-O-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PK3=1
+[File022]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\obj\heartBeat.o
+Folder=Intermediary
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mcc18.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=-O-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PK3=1
+[File023]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\obj\interruptvector.o
+Folder=Intermediary
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mcc18.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=-O-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PK3=1
+[File024]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\obj\main.o
+Folder=Intermediary
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mcc18.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=-O-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PK3=1
+[File025]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\obj\timer.o
+Folder=Intermediary
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mcc18.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=-O-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PK3=1
+[File026]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\obj\communication.o
+Folder=Intermediary
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mcc18.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=-O-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PK3=1
+[File027]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\obj\uart.o
+Folder=Intermediary
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mcc18.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=-O-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PK3=1
+[File028]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\obj\app.o
+Folder=Intermediary
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mcc18.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=-O-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PK3=1
+[File029]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\obj\digitdisplay.o
+Folder=Intermediary
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mcc18.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=-O-
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_PK3=1
+[File030]
 Location=C:\Documents and Settings\Saagar\Desktop\Work To Do\Token_Display\output\TokenDisplay.cof
 Folder=Output
 DeviceName=PIC18F46K22
@@ -274,7 +404,7 @@ SuiteArgsString=
 ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
 TraceCmdString=
 DebugOptions=/z__MPLAB_DEBUG=1
-[File021]
+[File031]
 Location=C:\Documents and Settings\Saagar\Desktop\Work To Do\Token_Display\output\TokenDisplay.hex
 Folder=Output
 DeviceName=PIC18F46K22
@@ -287,7 +417,7 @@ SuiteArgsString=
 ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
 TraceCmdString=
 DebugOptions=/z__MPLAB_DEBUG=1
-[File022]
+[File032]
 Location=C:\Documents and Settings\Saagar\Desktop\Work To Do\Token_Display\output\TokenDisplay.map
 Folder=Output
 DeviceName=PIC18F46K22
@@ -300,7 +430,7 @@ SuiteArgsString=
 ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
 TraceCmdString=
 DebugOptions=/z__MPLAB_DEBUG=1
-[File023]
+[File033]
 Location=C:\Users\IDEONICS-BNG\Documents\GitHub\Token_Display\output\TokenDisplay.cof
 Folder=Output
 DeviceName=PIC18F46K22
@@ -313,7 +443,7 @@ SuiteArgsString=
 ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
 TraceCmdString=
 DebugOptions=/z__MPLAB_DEBUG=1
-[File024]
+[File034]
 Location=C:\Users\IDEONICS-BNG\Documents\GitHub\Token_Display\output\TokenDisplay.hex
 Folder=Output
 DeviceName=PIC18F46K22
@@ -326,7 +456,7 @@ SuiteArgsString=
 ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
 TraceCmdString=
 DebugOptions=/z__MPLAB_DEBUG=1
-[File025]
+[File035]
 Location=C:\Users\IDEONICS-BNG\Documents\GitHub\Token_Display\output\TokenDisplay.map
 Folder=Output
 DeviceName=PIC18F46K22
@@ -339,6 +469,45 @@ SuiteArgsString=
 ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
 TraceCmdString=
 DebugOptions=/z__MPLAB_DEBUG=1
+[File036]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\output\TokenDisplay.cof
+Folder=Output
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mplink.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1 /z__MPLAB_DEBUGGER_PK3=1 /z__ICD2RAM=1
+[File037]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\output\TokenDisplay.hex
+Folder=Output
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mplink.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1 /z__MPLAB_DEBUGGER_PK3=1 /z__ICD2RAM=1
+[File038]
+Location=C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\Display\output\TokenDisplay.map
+Folder=Output
+DeviceName=PIC18F46K22
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mplink.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|obj||$(AINDIR)||$(INCDIR)|C:\Program Files\Microchip\mplabc18\v3.46\h;include||$(LIBDIR)|C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib||$(LKRDIR)||
+SOLK=<src>|source\board.c|source\config.c|source\heartBeat.c|source\interruptvector.c|source\main.c|source\timer.c|source\communication.c|source\uart.c|source\app.c|source\digitdisplay.c||<obj>||<lib>||<lkr>|18f46k22_g.lkr||
+SuiteArgsString=
+ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
+TraceCmdString=
+DebugOptions=/z__MPLAB_DEBUG=1 /z__MPLAB_DEBUGGER_PK3=1 /z__ICD2RAM=1
 [TOOL_LOC_STAMPS]
 tool_loc{96C98149-AA1B-4CF9-B967-FAE79CAB663C}=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mplink.exe
 tool_loc{E56A1C86-9D32-4DF6-8C34-FE0388B1B644}=C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin\mcc18.exe
