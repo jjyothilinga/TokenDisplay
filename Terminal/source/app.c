@@ -68,11 +68,29 @@ void APP_task(void)
 
 }
 
+void APP_writeEEPROM( UINT8 *buffer )
+{
+	UINT8 i;
+	for(i = 0; i < MAX_OUTPUT_CHARS; i++)
+	{
+		Write_b_eep( (EEPROM_ADD + i), buffer[i]);
+		Busy_eep();
+	}
+}
 
-
+void APP_readEEPROM( UINT8 *buffer )
+{
+	UINT8 i;
+	for(i = 0; i < MAX_OUTPUT_CHARS; i++)
+	{
+		buffer[i] = Read_b_eep(EEPROM_ADD + i);
+		Busy_eep();
+	}
+}
 void APP_incrementAndCall(UINT8 *buffer)
 {
-	UINT8 temp, i;
+	UINT8 i;
+	BOOL flag = FALSE;
 	
 	
 	//increment buffer value
@@ -91,12 +109,12 @@ void APP_incrementAndCall(UINT8 *buffer)
 			if(buffer[0] < '9')
 				buffer[0]++;
 			else
-				temp = TRUE;
+				flag = TRUE;
 		}
 	}
 	
 	//Reset buffer if it exceeds its limit
-	if(temp == TRUE)
+	if(flag == TRUE)
 	{
 		for(i = 0; i < MAX_OUTPUT_CHARS; i++)
 			buffer[i] = '0';
@@ -110,25 +128,30 @@ void APP_incrementAndCall(UINT8 *buffer)
 
 void APP_decrementAndCall(UINT8 *buffer)
 {
+	UINT8 i;
+	BOOL flag = FALSE;
+
 	//decrement buffer value
 	if(buffer[2] > '0')
 		buffer[2]--;
-	else
+	else if( buffer[1] > '0' )
 	{
-		if( buffer[1] > '0' )
-		{
-			buffer[1]--;	
-			buffer[2] = '9';
-		}	
-		else
-		{
-			if( buffer[0] > '0' )
-			{
-				buffer[0]--;
-				buffer[1] = '9';
-				buffer[2] = '9';
-			}
-		}
+		buffer[1]--;	
+		buffer[2] = '9';
+	}	
+	else if( buffer[0] > '0' )
+	{
+		buffer[0]--;
+		buffer[1] = '9';
+		buffer[2] = '9';
+	}
+	else
+		flag = TRUE;
+		
+	if( flag == TRUE )
+	{
+		for(i = 0; i < MAX_OUTPUT_CHARS; i++)
+			buffer[i] = '9';
 	}
 
 	COM_txCMD( DEVICE_ADDRESS, buffer, 3);

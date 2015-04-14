@@ -12,12 +12,13 @@ typedef struct _UI
 {
 	UI_STATE state;
 	UI_STATE prevState;
-	UINT8 buffer[MAX_OUTPUT_CHARS + 1];
+	UINT8 buffer[MAX_INPUT_CHARS+1];
 	UINT8 bufferIndex;
 	UINT8 prevcode;
 	UINT8 keyIndex;
 	UINT8 input[MAX_INPUT_CHARS+1];
 	UINT8 inputIndex;
+	BOOL initDispUpdateFlag;
 }UI;
 
 
@@ -51,11 +52,24 @@ void showUImsg( UINT8* msg );
 void UI_init(void)
 {
 
+	UINT8 i;
+
 	LCD_setBackSpace('\x08');	//Indicates LCD driver "\x08" is the symbol for backspace
 
 	ui.state = UI_IDLE;
 	clearUIBuffer();
+
+	APP_readEEPROM( ui.buffer );
+
+	for(i = 0; i < MAX_OUTPUT_CHARS; i++)
+	{
+		if(ui.buffer[i] != '0')
+			ui.initDispUpdateFlag = TRUE;
+	}
+			
+//	showUImsg( ui.buffer );
 	clearUIInput();
+	
 }
 
 
@@ -67,6 +81,15 @@ void UI_task(void)
 	UINT8 i;
 	UINT8 duration, scancode;
 	UINT8 uimsg;
+
+	if(ui.initDispUpdateFlag == TRUE)
+	{
+		showUImsg( ui.buffer );
+		APP_call( ui.buffer );
+		ui.initDispUpdateFlag = FALSE;
+		ui.bufferIndex = 3;
+	}
+
 
 	if(KEYPAD_read(&scancode, &duration) == FALSE)			//Check whether key has been pressed
 	{
@@ -101,26 +124,24 @@ void UI_task(void)
 		// If pressed key is backspace handle the buffer and update LCD
 		else if( keypressed == '\x08' )
 		{
-			UINT8 i;
-			//right shift content of buffer and store '0' at MSB of buffer
-			for (i = MAX_OUTPUT_CHARS - 1; i > 0; i--)
+			if(ui.bufferIndex > 0 )
 			{
-				ui.buffer[i] = ui.buffer[i-1];
+				LCD_putChar(keypressed);
+				ui.bufferIndex--;
+				ui.buffer[ui.bufferIndex] = '\0';
+				if( ui.inputIndex > 0 )
+					ui.inputIndex--;
 			}
-			ui.buffer[i] = '0';
-			showUImsg( ui.buffer );
 		}
 		else
 		{
-			UINT8 i;
-			for (i = 0; i < MAX_OUTPUT_CHARS - 1; i++)
+			if(ui.bufferIndex < 3 )
 			{
-				ui.buffer[i] = ui.buffer[i+1];
+				LCD_putChar(keypressed);
+				ui.buffer[ui.bufferIndex++] = keypressed;
 			}
-			ui.buffer[i] = keypressed;
-
-			showUImsg( ui.buffer );
 		}
+		APP_writeEEPROM( ui.buffer );
 		ui.state = UI_IDLE;	
 		break;
 
@@ -135,6 +156,7 @@ void UI_task(void)
 		case UI_INCREMENT:
 
 			APP_incrementAndCall( ui.buffer );
+			APP_writeEEPROM( ui.buffer );
 			showUImsg( ui.buffer );
 			ui.state = UI_IDLE;
 																										
@@ -142,6 +164,7 @@ void UI_task(void)
 
 		case UI_DECREMENT:
 			APP_decrementAndCall( ui.buffer );
+			APP_writeEEPROM( ui.buffer );
 			showUImsg( ui.buffer );
 			ui.state = UI_IDLE;																										
 		
@@ -246,7 +269,7 @@ void clearUIBuffer(void)
 		ui.buffer[i] = '0';
 
 	ui.buffer[MAX_OUTPUT_CHARS] = '\0';
-
+	ui.bufferIndex = 0;
 //	memset(ui.buffer,0, MAX_OUTPUT_CHARS);
 }
 

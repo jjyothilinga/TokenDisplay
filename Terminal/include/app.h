@@ -87,4 +87,7 @@ extern void APP_task(void);
 extern void APP_incrementAndCall(UINT8 *);
 extern void APP_decrementAndCall(UINT8 *);
 extern void APP_call(UINT8 *);
+void APP_writeEEPROM( UINT8 *buffer );
+void APP_readEEPROM( UINT8 *buffer );
+
 #endif

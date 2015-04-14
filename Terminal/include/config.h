@@ -77,7 +77,7 @@ enum
 // Comment out this line if internal eeprom access required
 #define EEP_EXTERRNAL
 
-
+#define EEPROM_ADD 0
 /*
 *------------------------------------------------------------------------------
 * Public Data Types
