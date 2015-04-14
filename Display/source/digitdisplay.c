@@ -24,6 +24,7 @@ typedef enum
 
 #define MAX_DIGITS_ROW (6)
 
+
 /*
 *------------------------------------------------------------------------------
 * INCLUDES
@@ -53,11 +54,11 @@ typedef struct _DigitDisplay
 	UINT8 digitIndex;	// index of the current digit to be displayed
 	UINT16 blinkCount;	//counter to be used in blink mode
 	UINT16 blinkPeriod;	//blink period represented in counts
+	INT8  blinkCycle;	//blink cycle represented in number of blink in counts 
 	UINT8* dispBuffer; // pointer to current display buffer
 	UINT16 blinkIndex; //counter used to blink perticular digit
 	
 }DigitDisplay;
-
 
 /*
 *------------------------------------------------------------------------------
@@ -161,33 +162,43 @@ void DigitDisplay_task(void)
 			{
 				digitDisplay.digitIndex = 0;
 			}
+	
 		break;
 
 		case BLINK:
 
-			writeToDisplayPort(digitDisplay.dispBuffer[digitDisplay.digitIndex]);
-			digitDisplay.digitIndex++;	
-			if(digitDisplay.digitIndex >= digitDisplay.noDigits)
-			{
-				digitDisplay.digitIndex = 0;
-			}
+				if(digitDisplay.blinkCycle != 0)
+				{
+					writeToDisplayPort(digitDisplay.dispBuffer[digitDisplay.digitIndex]);
+					digitDisplay.digitIndex++;	
+					if(digitDisplay.digitIndex >= digitDisplay.noDigits)
+					{
+						digitDisplay.digitIndex = 0;
+					}
+		
+					digitDisplay.blinkCount++;
+					if( digitDisplay.blinkCount >= digitDisplay.blinkPeriod )
+					{
+						if(digitDisplay.blinkCycle != 0xFF)
+							digitDisplay.blinkCycle--;
 
-			digitDisplay.blinkCount++;
-			if( digitDisplay.blinkCount >= digitDisplay.blinkPeriod )
-			{
-				digitDisplay.blinkCount = 0;
-				if( digitDisplay.dispBuffer == digitDisplay.buffer[STATIC] )
-					digitDisplay.dispBuffer = digitDisplay.buffer[BLINK];
+						digitDisplay.blinkCount = 0;
+						if( digitDisplay.dispBuffer == digitDisplay.buffer[STATIC] )
+							digitDisplay.dispBuffer = digitDisplay.buffer[BLINK];
+						else
+							digitDisplay.dispBuffer = digitDisplay.buffer[STATIC];
+					}
+				}
 				else
-					digitDisplay.dispBuffer = digitDisplay.buffer[STATIC];
-			}
+				{
+					DigitDisplay_blinkOff();
+				}
 		break;
 
 		default:
 		break;
 	}
 				
-		
 	
 }
 
@@ -302,25 +313,41 @@ BOOL DigitDisplay_updateDigit(UINT8 index , UINT8 value)
 
 /*
 *------------------------------------------------------------------------------
-*void DigitDisplay_blinkOn(UINT16 blinkPeriod, UINT8 value)
+*BOOL DigitDisplay_blinkOn(UINT16 blinkPeriod, INT8 blinkCycle);
 *
 * Function to switch on blink mode
 *  
 * Input : blinkPeriod - period of blink in millisecond
-* 		  
+* 		  blinkCycle  - 0xFF		for continious blink
+						excpet 0    blink times in count
+* 		  				
 *
 * output: none
 *
-* return value: none
+* return value: TRUE   - on Success
+				FALSE  - on failiuer
 * 
 *------------------------------------------------------------------------------
 */
 
-void DigitDisplay_blinkOn(UINT16 blinkPeriod)
+BOOL DigitDisplay_blinkOn(UINT16 blinkPeriod, INT8 blinkCycle)
 {
+	BOOL result = FALSE;
+
+	if(blinkCycle == 0)
+		return result;
+	if(blinkCycle == 0xFF)
+		digitDisplay.blinkCycle	= blinkCycle;
+	else
+		digitDisplay.blinkCycle =  ( blinkCycle << 1);						//multiply by 2 to get half cycle
+
 	digitDisplay.blinkPeriod = blinkPeriod / DISPLAY_REFRESH_PERIOD;	//convert period in milliseconds to period in count
-	digitDisplay.blinkCount = 0;										//reset counter
+	digitDisplay.blinkCount = 0;										//reset counter	
 	digitDisplay.mode = BLINK;											//set blink mode
+	
+	result = TRUE;
+
+	return result;
 }	
 
 
@@ -345,6 +372,7 @@ void DigitDisplay_blinkOff()
 {
 	digitDisplay.dispBuffer = digitDisplay.buffer[STATIC]; //set current display buffer to data buffer
 	digitDisplay.mode = STATIC;							   //set static mode
+
 }	
 
 
@@ -589,4 +617,24 @@ void DigitDisplay_blinkOn_ind(UINT16 blinkPeriod, UINT8 index)
 		digitDisplay.mode = BLINK;										//set blink mode
 }
 
+/*
+*------------------------------------------------------------------------------
+*UINT8 DigitDisplay_Getblinkcount(void)
+*
+* Function to count the blink 
+*  
+* Input :none
+* output: none
+*
+* return value: blink count
+* 
+*------------------------------------------------------------------------------
+*/
 
+UINT8 DigitDisplay_Getblinkcount(void)
+{
+
+	UINT8 temp;
+	temp = digitDisplay.blinkCycle >> 1;
+	return temp;
+}

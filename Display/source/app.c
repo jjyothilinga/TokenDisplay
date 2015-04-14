@@ -23,13 +23,13 @@ void APP_resetCounter_Buffer(void);
 */
 typedef struct _App
 {   
-	UINT8 	token[ NO_OF_DIGITS];
-	UINT8	tokenFlag;
-	UINT8 	hooterCount;
-	UINT8	blinkCount;
-	UINT8   tokenNO;
-
-
+	UINT8 	token[ NO_OF_DIGITS];		//store the data going to be display
+	UINT8	tokenFlag;   				// to count the time of callback function exicute
+	UINT8 	hooterCount; 				//to maintain hooter on
+	UINT8	blinkCount;					//to maintain blink on
+	UINT8   tokenBuff[MAX_BUFF_SIZE];	//store the data from callback function
+	UINT8 	buffIndex;					//to maintain tokenBuff[MAX_BUFF_SIZE] for data write
+	UINT8   curBuffIndex;				//to maintain tokenBuff[MAX_BUFF_SIZE] for data read
 }APP;
 
 
@@ -58,18 +58,8 @@ void APP_init( void )
 
 	for(i= 0; i < NO_OF_DIGITS; i++)
 	{
-		app.token[i] = Read_b_eep(EPROM_TOKEN  + i  );
-		Busy_eep();
+		app.token[i] = '0';
 	}
-/*
-	app.Actual_Count = Read_b_eep(EPROM_ADD_ACTUAL);
-	Busy_eep();
-	app.Actual_Count <<= 8;
-	app.Actual_Count |= Read_b_eep(EPROM_ADD_ACTUAL+1);
-	Busy_eep();
-
-	APP_ASCIIconversion();
-*/
 	DigitDisplay_updateBuffer(app.token);
 
 
@@ -90,84 +80,45 @@ void APP_init( void )
 
 void APP_task( void )
 {
-	UINT8 i;
+	UINT8 i ;
 
-	app.hooterCount++;
-	app.blinkCount++;
-
-	if(app.tokenFlag == TRUE)
+	if(	++app.hooterCount >=  HOOTER_COUNT )
 	{
+		HOOTER = FALSE;
+	}
+
+
+
+	if ((app.tokenFlag > 0 )&& (DigitDisplay_Getblinkcount() == 0))
+	{
+		
+		if(app.curBuffIndex  == MAX_BUFF_SIZE)
+		{
+			app.curBuffIndex  = 0;	
+		}
+
+	//fill the data from 
+	    for( i = 0  ; i <  NO_OF_DIGITS; i++ , app.curBuffIndex++)
+		{
+			app.token[i] = app.tokenBuff[app.curBuffIndex] ;
+		}
 
        	DigitDisplay_updateBuffer(app.token);
 		HOOTER = TRUE;
-		DigitDisplay_blinkOn(1000);
-        for( i = 0; i < NO_OF_DIGITS; i++)
-		{
-			Write_b_eep(EPROM_TOKEN + i , app.token[i]);
-			Busy_eep();
-		}
+		DigitDisplay_blinkOn(1000 ,3);
 
-		app.tokenFlag = FALSE;
-	}
 
-	if(	app.hooterCount >=  HOOTER_COUNT )
-	{
-		HOOTER = FALSE;
-	}		
-	
-	if(	app.blinkCount >=  BLINK_COUNT )
-	{
-		DigitDisplay_blinkOff();
+		app.hooterCount = 0;
+		app.blinkCount = 0;
+		--app.tokenFlag ;
+
+
+
 	}
 		
+	
 	 
 }
-
-/*
-*------------------------------------------------------------------------------
-* void APP_conversion(UINT16)
-*
-* Summary	: 
-*
-* Input		: None
-*
-* Output	: None
-*------------------------------------------------------------------------------
-*/
-void APP_ASCIIconversion(void)
-{  
-	UINT8 i=0;
-    UINT16 count = app.tokenNO;
-
-	for( i = 0; i < 4; i++)
-	{
-	      app.token[i] = (count % 10)  + '0';
-		   count /= 10;
-	}
- 
-}
-
-
-/*
-*------------------------------------------------------------------------------
-* void APP_resetCounter_Buffer(void)
-*
-* Summary	: 
-*
-* Input		: None
-*
-* Output	: None
-*------------------------------------------------------------------------------
-*/
-void APP_resetCounter_Buffer(void)
-{
-	UINT8 i;
-	for(i = 0; i < NO_OF_DIGITS; i++)			//reset all digits
-	{
-	//	app.Actual[i] = '0';
-	}
-}	
-
 
 /*
 *------------------------------------------------------------------------------
@@ -184,21 +135,26 @@ void APP_resetCounter_Buffer(void)
 UINT8 APP_comCallBack( UINT8 *rxPacket, UINT8* txCode, UINT8** txPacket)
 {
 
-	UINT8 i;
+	UINT8 j ;
 	UINT8 length = 0;
 		    	
-	
-            for( i = 0; i < 3; i++)
+            for( j = 0; j < 3; app.buffIndex++ , j++)
 			{
-				app.token[i] = rxPacket[2 - i] ;
+				app.tokenBuff[app.buffIndex ] = rxPacket[2 - j] ;
 			}
-    		app.token[3] = '0';
-			app.hooterCount = 0;
-			app.blinkCount = 0;
-			app.tokenFlag = TRUE;
+    		app.tokenBuff[app.buffIndex++] = '0';
+
+
+			if(app.buffIndex  == MAX_BUFF_SIZE)
+			{
+				app.buffIndex  = 0;	
+			}
+			app.tokenFlag++;
+
 			*txCode = MODIFY_TOKEN;
-		   
 
 	return length;
 
 }
+
+

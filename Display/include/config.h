@@ -108,12 +108,13 @@ enum
 *----------------------------------------*/
 #define NO_OF_DIGITS			(0X04)
 
+#define MAX_BUFF_SIZE		60
 #define EPROM_TOKEN 		0
 #define MODIFY_TOKEN 		0x81
 #define MODIFY_PLAN 		0x82
 
-#define HOOTER_COUNT		100
-#define BLINK_COUNT			60
+#define HOOTER_COUNT		80
+#define BLINK_COUNT			3
 
 /*
 *------------------------------------------------------------------------------

@@ -1,2 +1,16 @@
-wait 1 sec
+wait 2 sec
+AA FA 03 71 72 73 89 BB
+wait 2 sec
+AA FA 03 71 72 73 89 BB
+wait 2 sec
+AA FA 03 71 72 73 89 BB
+wait 2 sec
+AA FA 03 71 72 73 89 BB
+wait 2 sec
+AA FA 03 71 72 73 89 BB
+wait 2 sec
+AA FA 03 71 72 73 89 BB
+wait 2 sec
+AA FA 03 71 72 73 89 BB
+wait 2 sec
 AA FA 03 71 72 73 89 BB

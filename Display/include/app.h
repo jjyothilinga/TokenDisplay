@@ -23,5 +23,6 @@ typedef enum
 extern void APP_init(void);
 UINT8 APP_comCallBack( UINT8 *rxPacket, UINT8* txCode, UINT8** txPacket);
 void APP_task(void);
+void APP_displayBlinkHandle(void);
 
 

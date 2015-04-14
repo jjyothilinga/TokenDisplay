@@ -166,20 +166,24 @@ void DigitDisplay_clear(void);
 
 /*
 *------------------------------------------------------------------------------
-*void DigitDisplay_blinkOn(UINT16 blinkPeriod, UINT8 value)
+*BOOL DigitDisplay_blinkOn(UINT16 blinkPeriod, INT8 blinkCycle);
 *
 * Function to switch on blink mode
 *  
 * Input : blinkPeriod - period of blink in millisecond
-* 		  
+* 		  blinkCycle  - 0xFF		for continious blink
+						excpet 0    blink times in count
+* 		  				
 *
 * output: none
 *
-* return value: none
+* return value: TRUE   - on Success
+				FALSE  - on failiuer
 * 
 *------------------------------------------------------------------------------
 */
-void DigitDisplay_blinkOn(UINT16 blinkPeriod);
+
+BOOL DigitDisplay_blinkOn(UINT16 blinkPeriod, INT8 blinkCycle);
 
 
 /*
@@ -253,5 +257,21 @@ BOOL DigitDisplay_updateBufferPartial(UINT8 *buffer, UINT8 from, UINT8 length);
 */
 
 void DigitDisplay_blinkOn_ind(UINT16 blinkPeriod, UINT8 index);
+
+/*
+*------------------------------------------------------------------------------
+*UINT8 DigitDisplay_Getblinkcount(void);
+*
+* Function to count the blink 
+*  
+* Input :none
+* output: none
+*
+* return value: blink count
+* 
+*------------------------------------------------------------------------------
+*/
+
+UINT8 DigitDisplay_Getblinkcount(void);
 
 #endif

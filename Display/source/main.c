@@ -159,7 +159,7 @@ void main(void)
 	//initialize timer0
 	TMR0_init(tickPeriod,0);
 	//initialize timer1
-	TMR0_init(DIGIT_REFRESH_PERIOD,DigitDisplay_task);
+	TMR1_init(DIGIT_REFRESH_PERIOD,DigitDisplay_task);
 	//initialize timer2
 //	TMR2_init(30,DigitDisplay_task);	
 	//initialize Communication
@@ -187,7 +187,7 @@ void main(void)
         	AppUpdate_count= 0;
 		
 		}
-
+		
      	COM_task();
 	}
 		
