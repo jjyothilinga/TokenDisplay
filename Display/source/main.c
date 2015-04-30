@@ -157,9 +157,9 @@ void main(void)
 
 	DigitDisplay_init( NO_OF_DIGITS);		
 	//initialize timer0
-	TMR0_init(tickPeriod,0);
+	TMR0_init(DIGIT_REFRESH_PERIOD,DigitDisplay_task);
 	//initialize timer1
-	TMR1_init(DIGIT_REFRESH_PERIOD,DigitDisplay_task);
+//	TMR1_init(DIGIT_REFRESH_PERIOD,DigitDisplay_task);
 	//initialize timer2
 //	TMR2_init(30,DigitDisplay_task);	
 	//initialize Communication

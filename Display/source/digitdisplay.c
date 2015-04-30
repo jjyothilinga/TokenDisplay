@@ -117,6 +117,7 @@ BOOL DigitDisplay_init( UINT8 noDigits )
 	digitDisplay.dispBuffer = digitDisplay.buffer[STATIC];	//set initial display buffer to data(i.e. buffer[0])
 
 #ifdef __DISPLAY_TEST__
+/*
 	for( i = 0; i < 11 ; i++)
 	{
 		for(j = 0 ; j < noDigits; j++)
@@ -130,6 +131,16 @@ BOOL DigitDisplay_init( UINT8 noDigits )
 		}
 	
 	}
+*/
+for(j = 0; j < NO_OF_DIGITS ; j++)
+{
+	for( i = 0; i < 11 ; i++)
+	{
+		writeToDisplayPort( SEVENSEGMENT[i]| (0x80) )	;
+		DelayMs(200);
+	}
+	digitDisplay.digitIndex++;
+}
 #endif	//__DISPLAY_TEST__
 	digitDisplay.digitIndex  = 0;
 	
@@ -435,8 +446,6 @@ static void writeToDisplayPort( UINT8 value )
 	DIGIT_SEL_A = 1;		//switch off display
 	DIGIT_SEL_B = 1;
 	DIGIT_SEL_C = 1;
-	DIGIT_SEL_D = 1;
-
 	
 	DISPLAY_PORT = ~value;
 	switch( digitDisplay.digitIndex )
@@ -456,12 +465,6 @@ static void writeToDisplayPort( UINT8 value )
 
    		break;
 
-		case 3:
-   			DIGIT_SEL_D = 0;
-		
-   		break;
-
-
 		default:
 		break;
 	}
@@ -472,10 +475,10 @@ static void writeToDisplayPort( UINT8 value )
 	DIGIT_SEL_A = 0;		//switch off display
 	DIGIT_SEL_B = 0;
 	DIGIT_SEL_C = 0;
-	DIGIT_SEL_D = 0;
 
-	
+
 	DISPLAY_PORT = value;
+	Delay10us(1);
 	switch( digitDisplay.digitIndex )
 	{
 		case 0:
@@ -491,15 +494,10 @@ static void writeToDisplayPort( UINT8 value )
 
    		break;
 
-		case 3:
-   			DIGIT_SEL_D = 1;
-		
-   		break;
-
-
 		default:
 		break;
 	}
+	Delay10us(1);
 }
 #endif
 

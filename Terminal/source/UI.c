@@ -197,10 +197,10 @@ UINT8 mapKey(UINT8 scancode, UINT8 duration)
 		else if( keypressed == '\x0C' )
 			ui.state = UI_CALL;
 		// If pressed key is INCREMENT change state to UI_INCREMENT
-		else if ( keypressed == '\x0A' )
+		else if ( keypressed == '\x0B' )
 			ui.state = UI_INCREMENT;
 		// If pressed key is DECREMENT change state to UI_DECREMENT
-		else if ( keypressed == '\x0B' )
+		else if ( keypressed == '\x0A' )
 			ui.state = UI_DECREMENT;
 		else
 			ui.state = UI_UPDATE;

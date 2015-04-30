@@ -65,6 +65,7 @@
 #define	DIGIT_SEL_D						PORTAbits.RA4
 #define	DIGIT_SEL_D_DIRECTION  			TRISAbits.TRISA4
 
+
 //Display
 #define	DISPLAY_PORT               PORTD
 #define DISPLAY_PORT_DIRECTION     TRISD

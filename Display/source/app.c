@@ -137,13 +137,11 @@ UINT8 APP_comCallBack( UINT8 *rxPacket, UINT8* txCode, UINT8** txPacket)
 
 	UINT8 j ;
 	UINT8 length = 0;
-		    	
+
             for( j = 0; j < 3; app.buffIndex++ , j++)
 			{
 				app.tokenBuff[app.buffIndex ] = rxPacket[2 - j] ;
 			}
-    		app.tokenBuff[app.buffIndex++] = '0';
-
 
 			if(app.buffIndex  == MAX_BUFF_SIZE)
 			{
