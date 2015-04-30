@@ -179,7 +179,7 @@ void main(void)
 			heartBeatCount = 0;
 		}
 		
-		if(appUpdateCount >= 250)
+		if(appUpdateCount >= 500)
 		{
 			APP_task();	
 			appUpdateCount = 0;

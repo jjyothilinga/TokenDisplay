@@ -61,7 +61,7 @@ void APP_init( void )
 		app.token[i] = '0';
 	}
 	DigitDisplay_updateBuffer(app.token);
-
+	app.hooterCount =	HOOTER_COUNT;
 
 }
 
@@ -116,7 +116,10 @@ void APP_task( void )
 
 	}
 		
-	
+	if(app.hooterCount <=  HOOTER_COUNT)
+	{
+		HOOTER = ~HOOTER;
+	}
 	 
 }
 

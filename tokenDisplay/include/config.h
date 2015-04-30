@@ -72,7 +72,7 @@ enum
 #define MODIFY_TOKEN 		0x81
 #define MODIFY_PLAN 		0x82
 
-#define HOOTER_COUNT		80
+#define HOOTER_COUNT		5
 #define BLINK_COUNT			3
 
 
