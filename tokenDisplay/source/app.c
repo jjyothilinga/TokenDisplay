@@ -82,12 +82,15 @@ void APP_task( void )
 {
 	UINT8 i ;
 
-	if(	++app.hooterCount >=  HOOTER_COUNT )
+	if(	app.hooterCount >=  HOOTER_COUNT )
 	{
 		HOOTER = FALSE;
 	}
 
-
+	if(HOOTER == TRUE)
+	{
+		app.hooterCount++;	
+	}
 
 	if ((app.tokenFlag > 0 )&& (DigitDisplay_Getblinkcount() == 0))
 	{
@@ -116,7 +119,7 @@ void APP_task( void )
 
 	}
 		
-	if(app.hooterCount <=  HOOTER_COUNT)
+	if(app.hooterCount <  HOOTER_COUNT)
 	{
 		HOOTER = ~HOOTER;
 	}

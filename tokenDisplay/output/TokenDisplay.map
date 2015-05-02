@@ -1,5 +1,5 @@
 MPLINK 4.48, Linker
-Linker Map File - Created Thu Apr 30 18:23:48 2015
+Linker Map File - Created Sat May 02 13:41:56 2015
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -13,66 +13,66 @@ Linker Map File - Created Thu Apr 30 18:23:48 2015
     .code_communication.o       code   0x000696    program   0x00045c
              .code_uart.o       code   0x000af2    program   0x00034e
             .code_timer.o       code   0x000e40    program   0x000292
-              .code_app.o       code   0x0010d2    program   0x000174
-             .code_main.o       code   0x001246    program   0x0000b0
-               _cinit_scn       code   0x0012f6    program   0x00009e
-            .code_uopen.o       code   0x001394    program   0x00008a
-         .code_fxd3232u.o       code   0x00141e    program   0x000048
-           .code_t1open.o       code   0x001466    program   0x000042
-            .code_uread.o       code   0x0014a8    program   0x00003e
-          .code_t1write.o       code   0x0014e6    program   0x000038
-          .code_t0write.o       code   0x00151e    program   0x000038
-           .code_t0open.o       code   0x001556    program   0x000038
-                    .code       code   0x00158e    program   0x000020
-             _startup_scn       code   0x0015ae    program   0x00001c
-        .code_heartBeat.o       code   0x0015ca    program   0x00001a
-              D10TCYXCODE       code   0x0015e4    program   0x000016
-               uartdata_i    romdata   0x0015fa    program   0x00007e
-           DISPLAY_DATA_i    romdata   0x001678    program   0x000012
-               COM_DATA_i    romdata   0x00168a    program   0x00008c
-               APP_DATA_i    romdata   0x001716    program   0x000044
-          .romdata_uart.o    romdata   0x00175a    program   0x000000
-      .romdata_fxd3232u.o    romdata   0x00175a    program   0x000000
-         .romdata_uopen.o    romdata   0x00175a    program   0x000000
-          .idata_uart.o_i    romdata   0x00175a    program   0x000000
-        .romdata_t0open.o    romdata   0x00175a    program   0x000000
-         .romdata_timer.o    romdata   0x00175a    program   0x000000
-         .idata_timer.o_i    romdata   0x00175a    program   0x000014
-        .romdata_t1open.o    romdata   0x00175a    program   0x000000
-         .idata_uread.o_i    romdata   0x00175a    program   0x000000
-         .romdata_uread.o    romdata   0x00175a    program   0x000000
-         .idata_uopen.o_i    romdata   0x00175a    program   0x000000
-         .romdata_c018i.o    romdata   0x00175a    program   0x000000
-        .romdata___init.o    romdata   0x00175a    program   0x000000
-           .romdata_app.o    romdata   0x00175a    program   0x000000
-         .romdata_board.o    romdata   0x00175a    program   0x000000
- .romdata_communication.o    romdata   0x00175a    program   0x000000
-  .romdata_digitdisplay.o    romdata   0x00175a    program   0x000000
-     .romdata_heartBeat.o    romdata   0x00175a    program   0x000000
-.romdata_interruptvector.o    romdata   0x00175a    program   0x000000
-         .idata_udefs.o_i    romdata   0x00175a    program   0x000000
-          .romdata_main.o    romdata   0x00175a    program   0x000000
-         .romdata_udefs.o    romdata   0x00175a    program   0x000000
-             .stringtable    romdata   0x00175a    program   0x000000
-       .romdata_t1write.o    romdata   0x00175a    program   0x000000
-       .romdata_t0write.o    romdata   0x00175a    program   0x000000
-       .idata_t0write.o_i    romdata   0x00176e    program   0x000000
-        .idata_t1open.o_i    romdata   0x00176e    program   0x000000
-        .idata_t0open.o_i    romdata   0x00176e    program   0x000000
-       .idata_t1write.o_i    romdata   0x00176e    program   0x000000
-          .idata_main.o_i    romdata   0x00176e    program   0x000009
-     .idata_heartBeat.o_i    romdata   0x001777    program   0x000001
-.idata_interruptvector.o_i    romdata   0x001777    program   0x000000
-  .idata_digitdisplay.o_i    romdata   0x001778    program   0x00000b
-      .idata_fxd3232u.o_i    romdata   0x001778    program   0x000000
- .idata_communication.o_i    romdata   0x001783    program   0x000002
-        .idata___init.o_i    romdata   0x001785    program   0x000000
-         .idata_c018i.o_i    romdata   0x001785    program   0x000000
-           .idata_app.o_i    romdata   0x001785    program   0x000000
-         .idata_board.o_i    romdata   0x001785    program   0x000000
-            .code_c018i.o       code   0x001786    program   0x000000
-  .code_interruptvector.o       code   0x001786    program   0x000000
-            .code_udefs.o       code   0x001786    program   0x000000
+              .code_app.o       code   0x0010d2    program   0x000176
+             .code_main.o       code   0x001248    program   0x0000b0
+               _cinit_scn       code   0x0012f8    program   0x00009e
+            .code_uopen.o       code   0x001396    program   0x00008a
+         .code_fxd3232u.o       code   0x001420    program   0x000048
+           .code_t1open.o       code   0x001468    program   0x000042
+            .code_uread.o       code   0x0014aa    program   0x00003e
+          .code_t1write.o       code   0x0014e8    program   0x000038
+          .code_t0write.o       code   0x001520    program   0x000038
+           .code_t0open.o       code   0x001558    program   0x000038
+                    .code       code   0x001590    program   0x000020
+             _startup_scn       code   0x0015b0    program   0x00001c
+        .code_heartBeat.o       code   0x0015cc    program   0x00001a
+              D10TCYXCODE       code   0x0015e6    program   0x000016
+               uartdata_i    romdata   0x0015fc    program   0x00007e
+           DISPLAY_DATA_i    romdata   0x00167a    program   0x000012
+               COM_DATA_i    romdata   0x00168c    program   0x00008c
+               APP_DATA_i    romdata   0x001718    program   0x000044
+          .romdata_uart.o    romdata   0x00175c    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x00175c    program   0x000000
+         .romdata_uopen.o    romdata   0x00175c    program   0x000000
+          .idata_uart.o_i    romdata   0x00175c    program   0x000000
+        .romdata_t0open.o    romdata   0x00175c    program   0x000000
+         .romdata_timer.o    romdata   0x00175c    program   0x000000
+         .idata_timer.o_i    romdata   0x00175c    program   0x000014
+        .romdata_t1open.o    romdata   0x00175c    program   0x000000
+         .idata_uread.o_i    romdata   0x00175c    program   0x000000
+         .romdata_uread.o    romdata   0x00175c    program   0x000000
+         .idata_uopen.o_i    romdata   0x00175c    program   0x000000
+         .romdata_c018i.o    romdata   0x00175c    program   0x000000
+        .romdata___init.o    romdata   0x00175c    program   0x000000
+           .romdata_app.o    romdata   0x00175c    program   0x000000
+         .romdata_board.o    romdata   0x00175c    program   0x000000
+ .romdata_communication.o    romdata   0x00175c    program   0x000000
+  .romdata_digitdisplay.o    romdata   0x00175c    program   0x000000
+     .romdata_heartBeat.o    romdata   0x00175c    program   0x000000
+.romdata_interruptvector.o    romdata   0x00175c    program   0x000000
+         .idata_udefs.o_i    romdata   0x00175c    program   0x000000
+          .romdata_main.o    romdata   0x00175c    program   0x000000
+         .romdata_udefs.o    romdata   0x00175c    program   0x000000
+             .stringtable    romdata   0x00175c    program   0x000000
+       .romdata_t1write.o    romdata   0x00175c    program   0x000000
+       .romdata_t0write.o    romdata   0x00175c    program   0x000000
+       .idata_t0write.o_i    romdata   0x001770    program   0x000000
+        .idata_t1open.o_i    romdata   0x001770    program   0x000000
+        .idata_t0open.o_i    romdata   0x001770    program   0x000000
+       .idata_t1write.o_i    romdata   0x001770    program   0x000000
+          .idata_main.o_i    romdata   0x001770    program   0x000009
+     .idata_heartBeat.o_i    romdata   0x001779    program   0x000001
+.idata_interruptvector.o_i    romdata   0x001779    program   0x000000
+  .idata_digitdisplay.o_i    romdata   0x00177a    program   0x00000b
+      .idata_fxd3232u.o_i    romdata   0x00177a    program   0x000000
+ .idata_communication.o_i    romdata   0x001785    program   0x000002
+        .idata___init.o_i    romdata   0x001787    program   0x000000
+         .idata_c018i.o_i    romdata   0x001787    program   0x000000
+           .idata_app.o_i    romdata   0x001787    program   0x000000
+         .idata_board.o_i    romdata   0x001787    program   0x000000
+            .code_c018i.o       code   0x001788    program   0x000000
+  .code_interruptvector.o       code   0x001788    program   0x000000
+            .code_udefs.o       code   0x001788    program   0x000000
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300002_main.o    romdata   0x300002    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
@@ -136,18 +136,18 @@ Linker Map File - Created Thu Apr 30 18:23:48 2015
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x001784      
+                            0x000000    0x001786      
                             0x300001    0x300003      
                             0x300005    0x300006      
                             0x300008    0x30000d      
-            6032 out of 33048 program addresses used, program memory utilization is 18%
+            6034 out of 33048 program addresses used, program memory utilization is 18%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-          APP_comCallBack   0x0011ba    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\app.c
+          APP_comCallBack   0x0011bc    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\app.c
                  APP_init   0x0010d2    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\app.c
                  APP_task   0x001118    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\app.c
                  BRD_init   0x000028    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\board.c
@@ -157,9 +157,9 @@ Linker Map File - Created Thu Apr 30 18:23:48 2015
                  COM_task   0x000730    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\communication.c
                COM_txData   0x0009b4    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\communication.c
                 COM_txStr   0x000a44    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\communication.c
-                    D10_1   0x0015f4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                     D10x   0x0015ec    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-              Delay10TCYx   0x0015e4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                    D10_1   0x0015f6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x0015ee    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+              Delay10TCYx   0x0015e6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
        DigitDisplay_DotOn   0x00045a    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\digitdisplay.c
 DigitDisplay_Getblinkcount   0x000676    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\digitdisplay.c
     DigitDisplay_blinkOff   0x0003c0    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\digitdisplay.c
@@ -173,14 +173,14 @@ DigitDisplay_updateBufferBinary   0x000280    program     extern C:\Users\IDEONI
 DigitDisplay_updateBufferPartial   0x000504    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\digitdisplay.c
  DigitDisplay_updateDigit   0x0002d4    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\digitdisplay.c
          EnableInterrupts   0x000022    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\interruptvector.c
-                 FXD3232U   0x00141e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                 FXD3232U   0x001420    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
                GetAppTime   0x001072    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\timer.c
-                  HB_init   0x0015ca    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\heartBeat.c
-                  HB_task   0x0015d0    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\heartBeat.c
-               OpenTimer0   0x001556    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
-               OpenTimer1   0x001466    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
-                OpenUSART   0x001394    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-                ReadUSART   0x0014a8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uread.c
+                  HB_init   0x0015cc    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\heartBeat.c
+                  HB_task   0x0015d2    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\heartBeat.c
+               OpenTimer0   0x001558    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
+               OpenTimer1   0x001468    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
+                OpenUSART   0x001396    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+                ReadUSART   0x0014aa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uread.c
              ResetAppTime   0x0010c2    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\timer.c
                  TMR0_ISR   0x000e40    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\timer.c
                 TMR0_init   0x000fe4    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\timer.c
@@ -193,22 +193,22 @@ DigitDisplay_updateBufferPartial   0x000504    program     extern C:\Users\IDEON
                UART_write   0x000cfc    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\uart.c
        UartReceiveHandler   0x000af2    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\uart.c
       UartTransmitHandler   0x000bbc    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\uart.c
-              WriteTimer0   0x00151e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0write.c
-              WriteTimer1   0x0014e6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1write.c
-        _D10TCYXCODE_000A   0x0015ee    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x0015f0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x0015f2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+              WriteTimer0   0x001520    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0write.c
+              WriteTimer1   0x0014e8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1write.c
+        _D10TCYXCODE_000A   0x0015f0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x0015f2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x0015f4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
           ___for_lbl00035   0x000a14    program     static                          
           ___for_lbl00036   0x000a1a    program     static                          
           ___for_lbl00037   0x0009ea    program     static                          
            ___if_lbl00001   0x000010    program     static                          
            ___if_lbl00002   0x000018    program     static                          
            ___if_lbl00003   0x000020    program     static                          
-       ___return_lbl00000   0x001464    program     static                          
+       ___return_lbl00000   0x001466    program     static                          
        ___return_lbl00000   0x000004    program     static                          
        ___return_lbl00000   0x000020    program     static                          
-       ___return_lbl00001   0x0015c8    program     static                          
-       ___return_lbl00002   0x001392    program     static                          
+       ___return_lbl00001   0x0015ca    program     static                          
+       ___return_lbl00002   0x001394    program     static                          
        ___return_lbl00034   0x000a30    program     static                          
                __config_0   0x300001    program     static C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\main.c
                __config_1   0x300002    program     static C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\main.c
@@ -222,28 +222,28 @@ DigitDisplay_updateBufferPartial   0x000504    program     extern C:\Users\IDEON
                __config_8   0x30000b    program     static C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\main.c
                __config_9   0x30000c    program     static C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\main.c
                    __init   0x000006    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x00158e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                _do_cinit   0x0012f6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+            __zero_memory   0x001590    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                _do_cinit   0x0012f8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                   _false   0x001460    program     static                          
-                 _startup   0x0015ae    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   _false   0x001462    program     static                          
+                 _startup   0x0015b0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  checksum   0x000a8e    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\communication.c
-                compare_l   0x0015a4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                copy_loop   0x001368    program     static                          
-            copy_one_byte   0x00136e    program     static                          
-                     done   0x001392    program     static                          
-             done_copying   0x00137c    program     static                          
+                compare_l   0x0015a6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                copy_loop   0x00136a    program     static                          
+            copy_one_byte   0x001370    program     static                          
+                     done   0x001394    program     static                          
+             done_copying   0x00137e    program     static                          
            high_interrupt   0x000008    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\interruptvector.c
-                     loop   0x0015be    program     static                          
-                     loop   0x00142c    program     static                          
-                   loop_h   0x00159c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_l   0x0015a6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                     main   0x001246    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\main.c
+                     loop   0x0015c0    program     static                          
+                     loop   0x00142e    program     static                          
+                   loop_h   0x00159e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x0015a8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     main   0x001248    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\main.c
               parsePacket   0x00091c    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\communication.c
-                     test   0x001310    program     static                          
+                     test   0x001312    program     static                          
                  validate   0x0004c0    program     static C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\digitdisplay.c
        writeToDisplayPort   0x000402    program     static C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\digitdisplay.c
-               zero_block   0x00159c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               zero_block   0x00159e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADCON0   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                ADCON0bits   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADCON1   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -537,41 +537,41 @@ DigitDisplay_Getblinkcount   0x000676    program     extern C:\Users\IDEONICS-BN
              ResetAppTime   0x0010c2    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\timer.c
                  APP_init   0x0010d2    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\app.c
                  APP_task   0x001118    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\app.c
-          APP_comCallBack   0x0011ba    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\app.c
-                     main   0x001246    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\main.c
-                _do_cinit   0x0012f6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x001310    program     static                          
-                copy_loop   0x001368    program     static                          
-            copy_one_byte   0x00136e    program     static                          
-             done_copying   0x00137c    program     static                          
-       ___return_lbl00002   0x001392    program     static                          
-                     done   0x001392    program     static                          
-                OpenUSART   0x001394    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-                 FXD3232U   0x00141e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                     loop   0x00142c    program     static                          
-                   _false   0x001460    program     static                          
-       ___return_lbl00000   0x001464    program     static                          
-               OpenTimer1   0x001466    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
-                ReadUSART   0x0014a8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uread.c
-              WriteTimer1   0x0014e6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1write.c
-              WriteTimer0   0x00151e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0write.c
-               OpenTimer0   0x001556    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
-            __zero_memory   0x00158e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-               zero_block   0x00159c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_h   0x00159c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                compare_l   0x0015a4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_l   0x0015a6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                 _startup   0x0015ae    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x0015be    program     static                          
-       ___return_lbl00001   0x0015c8    program     static                          
-                  HB_init   0x0015ca    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\heartBeat.c
-                  HB_task   0x0015d0    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\heartBeat.c
-              Delay10TCYx   0x0015e4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                     D10x   0x0015ec    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000A   0x0015ee    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x0015f0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x0015f2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                    D10_1   0x0015f4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+          APP_comCallBack   0x0011bc    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\app.c
+                     main   0x001248    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\main.c
+                _do_cinit   0x0012f8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x001312    program     static                          
+                copy_loop   0x00136a    program     static                          
+            copy_one_byte   0x001370    program     static                          
+             done_copying   0x00137e    program     static                          
+       ___return_lbl00002   0x001394    program     static                          
+                     done   0x001394    program     static                          
+                OpenUSART   0x001396    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+                 FXD3232U   0x001420    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                     loop   0x00142e    program     static                          
+                   _false   0x001462    program     static                          
+       ___return_lbl00000   0x001466    program     static                          
+               OpenTimer1   0x001468    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
+                ReadUSART   0x0014aa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uread.c
+              WriteTimer1   0x0014e8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1write.c
+              WriteTimer0   0x001520    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0write.c
+               OpenTimer0   0x001558    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
+            __zero_memory   0x001590    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               zero_block   0x00159e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_h   0x00159e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                compare_l   0x0015a6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x0015a8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 _startup   0x0015b0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x0015c0    program     static                          
+       ___return_lbl00001   0x0015ca    program     static                          
+                  HB_init   0x0015cc    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\heartBeat.c
+                  HB_task   0x0015d2    program     extern C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\heartBeat.c
+              Delay10TCYx   0x0015e6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x0015ee    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000A   0x0015f0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x0015f2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x0015f4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                    D10_1   0x0015f6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
                __config_0   0x300001    program     static C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\main.c
                __config_1   0x300002    program     static C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\main.c
                __config_2   0x300003    program     static C:\Users\IDEONICS-BNG\Documents\GitHub\TokenDisplay\tokenDisplay\source\main.c
